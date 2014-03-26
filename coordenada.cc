@@ -26,7 +26,7 @@ void Coordenada::setY(double newY){
 }
 void Coordenada::setZ(double newZ){
     z = newZ;
-}/*
+}/*TESTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 Coordenada Coordenada::operator+(const Coordenada& b){
     return Coordenada(x+b.x(),y+b.y(),z+b.z());
 }
