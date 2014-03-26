@@ -26,17 +26,17 @@ void Coordenada::setY(double newY){
 }
 void Coordenada::setZ(double newZ){
     z = newZ;
-}/*TESTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-Coordenada Coordenada::operator+(const Coordenada& b){
-    return Coordenada(x+b.x(),y+b.y(),z+b.z());
 }
-Coordenada Coordenada::operator-(const Coordenada& b){
-    return Coordenada(x-b.x(),y-b.y(),z-b.z());
+Coordenada Coordenada::operator+(Coordenada& b){
+    return Coordenada(x + b.getX(),y + b.getY(),z + b.getZ());
+}
+Coordenada Coordenada::operator-(Coordenada& b){
+    return Coordenada(x-b.getX(),y-b.getY(),z-b.getZ());
 }
 Coordenada Coordenada::operator*(double escalar){
     return Coordenada(x*escalar,y*escalar,z*escalar);
 }
-Coordenada Coordenada::operator==(const Coordenada& b){
-    return x == b.x() && y == b.y() && z == b.z();
+bool Coordenada::operator==(Coordenada& b){
+    return x == b.getX() && y == b.getY() && z == b.getZ();
 }
-*/
+
