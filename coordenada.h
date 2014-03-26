@@ -18,11 +18,10 @@ private:
     void setY(double newY);
    double getZ();
     void setZ(double newZ);
-   // Coordenada operator+(const Coordenada& b) const;
- /*   Coordenada operator-(const Coordenada& b) const;
-    Coordenada operator*(double) const;
-    bool operator==(const Coordenada& b) const;
-*/
+    Coordenada operator+(Coordenada& b);
+    Coordenada operator-(Coordenada& b);
+    Coordenada operator*(double);
+    bool operator==(Coordenada& b);
 };
 
 #endif // COORDENADA_H

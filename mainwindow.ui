@@ -105,7 +105,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../CGViewport/imagens/new.png</normaloff>../../CGViewport/imagens/new.png</iconset>
+       <normaloff>imagens/new.png</normaloff>imagens/new.png</iconset>
      </property>
     </widget>
    </widget>
@@ -155,8 +155,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_left</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>moveLeft()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>moveRight()</slot>
+  <slot>moveLeft()</slot>
  </slots>
 </ui>
