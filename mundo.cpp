@@ -13,3 +13,5 @@ void Mundo::adicionarObjeto(ObjetoGrafico objeto){
 QVector<ObjetoGrafico> Mundo::getListaDeObjetos(){
     return listaObjetos;
 }
+
+

@@ -7,6 +7,8 @@
 #include <QtGui>
 #include "mundo.h"
 #include "ponto.h"
+#include "reta.h"
+#include "mundo.h"
 
 
 #define TAMANHO_MAX_X  256;

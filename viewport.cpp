@@ -43,6 +43,21 @@ void ViewPort::paintEvent(QPaintEvent *event){
     ponto2 = transformadaViewPort(ponto2);
     painter.drawLine(ponto1.coord1.getX(), ponto1.coord1.getY(),ponto2.coord1.getX(),ponto2.coord1.getY());
 
+    /** Mundo a ser criado **/
+    Mundo mundo = Mundo();
+    ponto1 = Ponto("ponto1", Coordenada(3,4));
+    Reta reta1 = Reta("reta1", Coordenada(10,10), Coordenada(5,700));
+
+    Ponto ponto1Mundo = transformadaViewPort(Ponto("ponto mundo",Coordenada(ponto1.coord1.getX(), ponto1.coord1.getY())));
+    painter.drawPoint(ponto1Mundo.coord1.getX(), ponto1Mundo.coord1.getY());
+
+    Ponto reta1MundoP1 = transformadaViewPort(Ponto("r1 mundo",Coordenada(reta1.coord1.getX(),reta1.coord1.getY())));
+    Ponto reta1MundoP2 = transformadaViewPort(Ponto("r2 mundo",Coordenada(reta1.coord2.getX(),reta1.coord2.getY())));
+    painter.drawLine(reta1MundoP1.coord1.getX(),reta1MundoP1.coord1.getY(), reta1MundoP2.coord1.getX(),reta1MundoP2.coord1.getY());
+
+    mundo.adicionarObjeto(ponto1);
+    mundo.adicionarObjeto(reta1);
+
     painter.end();
 }
 

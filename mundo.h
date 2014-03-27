@@ -5,10 +5,10 @@
 
 class Mundo
 {
-
 public:
-    QVector<ObjetoGrafico> listaObjetos;
     Mundo();
+
+    QVector<ObjetoGrafico> listaObjetos;
     void adicionarObjeto(ObjetoGrafico objeto);
     QVector<ObjetoGrafico> getListaDeObjetos();
 };
