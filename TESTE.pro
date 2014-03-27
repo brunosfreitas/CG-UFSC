@@ -14,9 +14,20 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    coordenada.cc
+    coordenada.cc \
+    ponto.cpp \
+    reta.cpp \
+    mundo.cpp \
+    objetografico.cpp \
+    viewport.cpp
 
 HEADERS  += mainwindow.h \
-    coordenada.h
+    coordenada.h \
+    ../ponto.h \
+    ponto.h \
+    reta.h \
+    mundo.h \
+    objetografico.h \
+    viewport.h
 
 FORMS    += mainwindow.ui

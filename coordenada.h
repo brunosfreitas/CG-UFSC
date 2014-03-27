@@ -12,12 +12,15 @@ private:
  public:
     Coordenada(double nx, double ny, double nz=0.0);
     Coordenada():x(0),y(0),z(0){}
+
     double getX();
-   void setX(double newX);
     double getY();
+    double getZ();
+
+    void setX(double newX);
     void setY(double newY);
-   double getZ();
     void setZ(double newZ);
+
     Coordenada operator+(Coordenada& b);
     Coordenada operator-(Coordenada& b);
     Coordenada operator*(double);

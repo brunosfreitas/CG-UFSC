@@ -10,30 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
     this->showMaximized();
     setFocusPolicy(Qt::StrongFocus);
     ui->setupUi(this);
-    createActions();
-    createToolBars();
 
-    QPixmap *pixmap = new QPixmap(100, 100);
-    pixmap->fill(Qt::black);
-    QGraphicsPixmapItem *pixmapItem = new QGraphicsPixmapItem();
-
-    QGraphicsScene *scene = new QGraphicsScene(0,0,100,100);
-
-
-
-   // ui->viewport->setScene(scene);
-
-    QPainter painter;
-    painter.begin(pixmap);
-    painter.setPen(QColor(0,255,0));
-    painter.drawLine(20,20,30,30);
-    painter.setPen(QColor(255,0,0));
-    painter.drawEllipse(30,30,30,30);
-    painter.end();
-    pixmapItem->setPixmap(*pixmap);
-     scene->addItem(pixmapItem);
-     ui->viewport->setScene(scene);
-    ui->viewport->update();
+    ui->telaParaViewPort->update();
 }
 
 MainWindow::~MainWindow()
@@ -41,21 +19,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::createToolBars()
-{
-    menuCG = addToolBar(tr("File"));
-    menuCG->addAction(inserirObjeto);
-}
 
-void MainWindow::createActions()
-//! [17] //! [18]
-{
-    inserirObjeto = new QAction(QIcon(":/imagens/new.png"), tr("&Adicionar novo objeto"),this);
-    inserirObjeto->setShortcuts(QKeySequence::New);
-    inserirObjeto->setStatusTip(tr("Add a new object"));
-    connect(inserirObjeto, SIGNAL(triggered()), this, SLOT(adicionarObjeto()));
-
-}
 void MainWindow::adicionarObjeto()
 {
     tabWidget = new QTabWidget;
@@ -83,6 +47,7 @@ void MainWindow::on_pushButton_up_clicked()
     printf("ENTROU PB UPPPPPP");
 
 }
+
 PontoTab::PontoTab(char nome,QWidget *parent)
     : QWidget(parent)
 {
@@ -112,3 +77,5 @@ PontoTab::PontoTab(char nome,QWidget *parent)
     setLayout(main2Layout);
 
 }
+
+

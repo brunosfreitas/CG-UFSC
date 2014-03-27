@@ -6,6 +6,7 @@
 #include <QListWidgetItem>
 #include <string>
 #include "ui_mainwindow.h"
+#include "viewport.h"
 
 using std::string;
 class PontoTab : public QWidget
@@ -36,8 +37,6 @@ void adicionarObjeto();
 private:
     Ui::MainWindow *ui;
      QTabWidget *tabWidget;
-     void createToolBars();
-     void createActions();
      QToolBar *menuCG;
      QAction *inserirObjeto;
 };
