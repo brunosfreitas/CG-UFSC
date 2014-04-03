@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>657</width>
-    <height>449</height>
+    <width>782</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="ViewPort" name="telaParaViewPort">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>70</y>
+      <x>260</x>
+      <y>30</y>
       <width>511</width>
-      <height>331</height>
+      <height>371</height>
      </rect>
     </property>
    </widget>
@@ -28,9 +28,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>70</y>
-      <width>120</width>
-      <height>331</height>
+      <y>10</y>
+      <width>241</width>
+      <height>441</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -42,104 +42,600 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QListWidget" name="listWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>101</width>
-       <height>91</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_up">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>110</y>
-       <width>31</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>^</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_right">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>130</y>
-       <width>21</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&gt;</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_left">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>130</y>
-       <width>21</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_down">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>150</y>
+       <x>85</x>
+       <y>360</y>
        <width>31</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string>up</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>imagens/new.png</normaloff>imagens/new.png</iconset>
+       <normaloff>../../Downloads/1396375167_navigate-up.png</normaloff>../../Downloads/1396375167_navigate-up.png</iconset>
      </property>
     </widget>
-   </widget>
-   <widget class="QFrame" name="frame_2">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>661</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>true</bool>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButton_right">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>380</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>right</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../Downloads/1396375189_navigate-right.png</normaloff>../../Downloads/1396375189_navigate-right.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_left">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>380</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>left</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../Downloads/1396375221_navigate-left.png</normaloff>../../Downloads/1396375221_navigate-left.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_down">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>400</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>down</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../Downloads/1396375271_navigate-down.png</normaloff>../../Downloads/1396375271_navigate-down.png</iconset>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="tabWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>114</width>
+       <width>221</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Objetos">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="accessibleName">
+       <string/>
+      </property>
+      <attribute name="title">
+       <string>Objetos</string>
+      </attribute>
+      <widget class="QListWidget" name="listaObjetos">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>201</width>
+         <height>141</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="Ponto">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="icon">
+       <iconset>
+        <normaloff>imagens/new.png</normaloff>imagens/new.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Add Objeto</string>
+      </attribute>
+      <widget class="QTabWidget" name="adicionarPoligono_Tab">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>211</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Ponto</string>
+        </attribute>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nome:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nomePonto_Edit">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>0</y>
+           <width>113</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="pontox_Edit">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>40</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="pontoy_Edit">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>40</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>50</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y :</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="criarPonto_Button">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>100</y>
+           <width>111</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Criar Ponto</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>Reta</string>
+        </attribute>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nome:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="criarReta_Button">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>100</y>
+           <width>87</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Criar Reta</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="retay1_Edit">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>40</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="retax1_Edit">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>40</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>50</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y1 :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nomereta_Edit">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>0</y>
+           <width>113</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>50</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X1 :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="retay2_Edit">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>70</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="retax2_Edit">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>70</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>80</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y2 :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X2 :</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>Polígono</string>
+        </attribute>
+        <widget class="QLineEdit" name="poly1_Edit">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>40</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="nomepol_Edit">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>101</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>10</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Nome:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="polx2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X2 :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="poly2_Edit">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>70</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="polx1_Edit">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>40</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhDigitsOnly</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="polx1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X1 :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="poly1">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>50</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y1 :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="poly2">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>80</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y2 :</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="polx2_Edit">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>70</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="poly3_Edit">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>100</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="polx3_Edit">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>100</y>
+           <width>31</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="poly3">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>110</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y3 :</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="polx3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>21</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X3 :</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>130</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Add Ponto</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>130</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Criar Polígono</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_Zoom">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>62</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Zoom</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_zoomMinus">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>240</y>
+       <width>41</width>
        <height>32</height>
       </rect>
      </property>
      <property name="text">
-      <string>Nova Forma</string>
+      <string>-</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_zoomPlus">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>240</y>
+       <width>41</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="console">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>430</y>
+      <width>511</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -147,22 +643,10 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>657</width>
+     <width>782</width>
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuComputa_o_Gr_fica">
-    <property name="title">
-     <string>Novo</string>
-    </property>
-    <widget class="QMenu" name="menuNova_Forma">
-     <property name="title">
-      <string>Nova Forma</string>
-     </property>
-    </widget>
-    <addaction name="menuNova_Forma"/>
-   </widget>
-   <addaction name="menuComputa_o_Gr_fica"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
@@ -174,29 +658,213 @@
    <header location="global">viewport.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>pontox_Edit</tabstop>
+  <tabstop>retay1_Edit</tabstop>
+  <tabstop>retax2_Edit</tabstop>
+  <tabstop>retay2_Edit</tabstop>
+  <tabstop>criarReta_Button</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>adicionarPoligono_Tab</tabstop>
+  <tabstop>nomePonto_Edit</tabstop>
+  <tabstop>retax1_Edit</tabstop>
+  <tabstop>nomereta_Edit</tabstop>
+  <tabstop>pontoy_Edit</tabstop>
+  <tabstop>criarPonto_Button</tabstop>
+  <tabstop>polx3_Edit</tabstop>
+  <tabstop>poly1_Edit</tabstop>
+  <tabstop>polx1_Edit</tabstop>
+  <tabstop>poly3_Edit</tabstop>
+  <tabstop>poly2_Edit</tabstop>
+  <tabstop>polx2_Edit</tabstop>
+  <tabstop>pushButton_up</tabstop>
+  <tabstop>nomepol_Edit</tabstop>
+  <tabstop>pushButton_left</tabstop>
+  <tabstop>telaParaViewPort</tabstop>
+  <tabstop>pushButton_right</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pushButton_down</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>listaObjetos</tabstop>
+  <tabstop>pushButton_zoomMinus</tabstop>
+  <tabstop>pushButton_zoomPlus</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
+   <sender>criarPonto_Button</sender>
+   <signal>clicked(bool)</signal>
    <receiver>MainWindow</receiver>
-   <slot>adicionarObjeto()</slot>
+   <slot>novoPonto()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>84</x>
-     <y>46</y>
+     <x>129</x>
+     <y>204</y>
     </hint>
     <hint type="destinationlabel">
-     <x>342</x>
-     <y>83</y>
+     <x>270</x>
+     <y>450</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>criarReta_Button</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>novaReta()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>459</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addPontoPoligono()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>446</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>novoPoligono()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>431</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_zoomMinus</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>zoomMinus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>294</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>241</x>
+     <y>308</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_zoomPlus</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>zoomPlus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>244</x>
+     <y>350</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_up</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>moveUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>90</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_down</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>moveDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>452</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>156</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_right</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>moveRight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>424</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>437</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_left</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>moveLeft()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>428</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>447</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>moveRight()</slot>
-  <slot>moveLeft()</slot>
   <slot>slot1()</slot>
   <slot>adicionarObjeto()</slot>
+  <slot>novoPonto()</slot>
+  <slot>novaReta()</slot>
+  <slot>addPontoPoligono()</slot>
+  <slot>novoPoligono()</slot>
+  <slot>zoomMinus()</slot>
+  <slot>zoomPlus()</slot>
+  <slot>moveUp()</slot>
+  <slot>moveDown()</slot>
+  <slot>moveLeft()</slot>
+  <slot>moveRight()</slot>
+  <slot>deletarItem()</slot>
  </slots>
 </ui>

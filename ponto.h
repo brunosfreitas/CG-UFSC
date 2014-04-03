@@ -10,6 +10,7 @@ public:
     Coordenada coord1;
 
     Ponto(QString nome, Coordenada coord);
+    Ponto(Coordenada coord);
 };
 
 #endif // PONTO_H

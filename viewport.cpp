@@ -3,6 +3,7 @@
 
 ViewPort::ViewPort(QWidget *parent) : QWidget(parent)
 {
+    objetos = QVector<ObjetoGrafico>();
 
     setBackgroundRole(QPalette::Dark);
     setAutoFillBackground(true);
@@ -21,42 +22,63 @@ ViewPort::ViewPort(QWidget *parent) : QWidget(parent)
 void ViewPort::setMundo(Mundo _mundo){
       objetos = _mundo.getListaDeObjetos();
       //update();
+
 }
 
 void ViewPort::paintEvent(QPaintEvent *event){
     QPainter painter;
     painter.begin(this);
+    pen.setColor(QColor(0,255,0,255));
     painter.setPen(pen);
     painter.setBrush(brush);
 
-    Ponto ponto1 = Ponto("p1",Coordenada(0,400));
-    Ponto ponto2 = Ponto("p2",Coordenada(0,-400));
+    /** Eixos X e Y **/
+    Ponto ponto1 = Ponto("p1",Coordenada(0,4000));
+    Ponto ponto2 = Ponto("p2",Coordenada(0,-4000));
 
     ponto1 = transformadaViewPort(ponto1);
     ponto2 = transformadaViewPort(ponto2);
     painter.drawLine(ponto1.coord1.getX(), ponto1.coord1.getY(),ponto2.coord1.getX(),ponto2.coord1.getY());
 
-    ponto1 = Ponto("p1",Coordenada(400,0));
-    ponto2 = Ponto("p2",Coordenada(-400,0));
+    ponto1 = Ponto("p1",Coordenada(4000,0));
+    ponto2 = Ponto("p2",Coordenada(-4000,0));
 
     ponto1 = transformadaViewPort(ponto1);
     ponto2 = transformadaViewPort(ponto2);
     painter.drawLine(ponto1.coord1.getX(), ponto1.coord1.getY(),ponto2.coord1.getX(),ponto2.coord1.getY());
 
-    /** Mundo a ser criado **/
-    Mundo mundo = Mundo();
-    ponto1 = Ponto("ponto1", Coordenada(3,4));
-    Reta reta1 = Reta("reta1", Coordenada(10,10), Coordenada(5,700));
+    //Preto
+    pen.setColor(QColor(0,0,0,255));
+    painter.setPen(pen);
 
-    Ponto ponto1Mundo = transformadaViewPort(Ponto("ponto mundo",Coordenada(ponto1.coord1.getX(), ponto1.coord1.getY())));
-    painter.drawPoint(ponto1Mundo.coord1.getX(), ponto1Mundo.coord1.getY());
+    /** Objetos **/
+    for(int n=0; n< objetos.size();n++){
+        if(objetos[n].quantidadeDePontos()==1){
+            // Ponto
+            ponto1 = transformadaViewPort(Ponto(objetos[n].getPontos()[0]));
+            painter.drawPoint(ponto1.coord1.getX(),ponto1.coord1.getY());
+        }
+        else if(objetos[n].quantidadeDePontos()==2){
+            //Reta
+            ponto1 = transformadaViewPort(Ponto(objetos[n].getPontos()[0]));
+            ponto2 = transformadaViewPort(Ponto(objetos[n].getPontos()[1]));
+            painter.drawLine(ponto1.coord1.getX(),ponto1.coord1.getY(),ponto2.coord1.getX(),ponto2.coord1.getY());//ponto1.coord1.getX(),ponto1.coord1.getY(),ponto2.coord1.getX(),ponto2.coord1.getY());
 
-    Ponto reta1MundoP1 = transformadaViewPort(Ponto("r1 mundo",Coordenada(reta1.coord1.getX(),reta1.coord1.getY())));
-    Ponto reta1MundoP2 = transformadaViewPort(Ponto("r2 mundo",Coordenada(reta1.coord2.getX(),reta1.coord2.getY())));
-    painter.drawLine(reta1MundoP1.coord1.getX(),reta1MundoP1.coord1.getY(), reta1MundoP2.coord1.getX(),reta1MundoP2.coord1.getY());
-
-    mundo.adicionarObjeto(ponto1);
-    mundo.adicionarObjeto(reta1);
+        }
+        else {
+            //Poligono
+            for(int m = 0; m  < objetos[n].quantidadeDePontos()-1 ; m++){
+                //Ponto a ponto
+                ponto1 = transformadaViewPort(Ponto(objetos[n].getPontos()[m]));
+                ponto2 = transformadaViewPort(Ponto(objetos[n].getPontos()[m+1]));
+                painter.drawLine(ponto1.coord1.getX(),ponto1.coord1.getY(),ponto2.coord1.getX(),ponto2.coord1.getY());
+            }
+            //Ultimo ponto com o primeiro
+           ponto1 = transformadaViewPort(Ponto(objetos[n].getPontos()[0]));
+           ponto2 = transformadaViewPort(Ponto(objetos[n].getPontos()[objetos[n].quantidadeDePontos()-1]));
+           painter.drawLine(ponto1.coord1.getX(),ponto1.coord1.getY(),ponto2.coord1.getX(),ponto2.coord1.getY());
+        }
+    }
 
     painter.end();
 }
@@ -74,7 +96,7 @@ QSize ViewPort::minimumSizeHint() const{
 }
 
 QSize ViewPort::sizeHint() const{
-    return QSize(400,200);
+    return QSize(200,200);
 }
 
 void ViewPort::setPen(const QPen &pen)
@@ -98,5 +120,45 @@ void ViewPort::setAntialiased(bool antialiased)
 void ViewPort::setTransformed(bool transformed)
 {
     this->transformed = transformed;
+    update();
+}
+
+/** Zoom **/
+void ViewPort::zoom(bool positivo){
+   double zoom = 0.9;
+   if(!positivo)
+       zoom = 1.1;
+
+   maxX = maxX*zoom;
+   minX = minX*zoom;
+
+   maxY = maxY*zoom;
+   minY = minY*zoom;
+   update();
+}
+
+/** Movimentos **/
+void ViewPort::moverTela(int movimento){
+    switch(movimento){
+    case 1:
+        maxY = maxY*1.1;
+        minY = minY*0.9;
+        break;
+
+    case 2:
+        maxY = maxY*0.9;
+        minY = minY*1.1;
+        break;
+
+    case 3:
+        maxX = maxX*0.9;
+        minX = minX*1.1;
+        break;
+    case 4:
+        maxX = maxX*1.1;
+        minX = minX*0.9;
+        break;
+
+    }
     update();
 }

@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = TESTE
+TARGET = CG1
 TEMPLATE = app
 
 
@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     reta.cpp \
     mundo.cpp \
     objetografico.cpp \
-    viewport.cpp
+    viewport.cpp \
+    poligono.cpp
 
 HEADERS  += mainwindow.h \
     coordenada.h \
@@ -28,6 +29,7 @@ HEADERS  += mainwindow.h \
     reta.h \
     mundo.h \
     objetografico.h \
-    viewport.h
+    viewport.h \
+    poligono.h
 
 FORMS    += mainwindow.ui

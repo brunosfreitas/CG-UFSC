@@ -12,6 +12,8 @@ public:
     QVector<Coordenada> pontos;
 
     ObjetoGrafico();
+    QVector<Coordenada> getPontos();
+    int quantidadeDePontos();
 };
 
 #endif // OBJETOGRAFICO_H
