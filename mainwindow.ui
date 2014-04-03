@@ -20,7 +20,7 @@
       <x>260</x>
       <y>30</y>
       <width>511</width>
-      <height>371</height>
+      <height>341</height>
      </rect>
     </property>
    </widget>
@@ -52,28 +52,20 @@
       </rect>
      </property>
      <property name="text">
-      <string>up</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../Downloads/1396375167_navigate-up.png</normaloff>../../Downloads/1396375167_navigate-up.png</iconset>
+      <string>▲</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_right">
      <property name="geometry">
       <rect>
-       <x>125</x>
+       <x>120</x>
        <y>380</y>
        <width>31</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>right</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../Downloads/1396375189_navigate-right.png</normaloff>../../Downloads/1396375189_navigate-right.png</iconset>
+      <string>▶</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_left">
@@ -86,11 +78,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>left</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../Downloads/1396375221_navigate-left.png</normaloff>../../Downloads/1396375221_navigate-left.png</iconset>
+      <string>◀</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_down">
@@ -103,11 +91,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>down</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../Downloads/1396375271_navigate-down.png</normaloff>../../Downloads/1396375271_navigate-down.png</iconset>
+      <string>▼</string>
      </property>
     </widget>
     <widget class="QTabWidget" name="tabWidget">
@@ -120,7 +104,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Objetos">
       <property name="toolTip">
@@ -164,7 +148,7 @@
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -623,6 +607,19 @@
       <string>+</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Movimento</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="console">
     <property name="geometry">
@@ -659,35 +656,35 @@
   </customwidget>
  </customwidgets>
  <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>listaObjetos</tabstop>
+  <tabstop>telaParaViewPort</tabstop>
+  <tabstop>adicionarPoligono_Tab</tabstop>
+  <tabstop>nomePonto_Edit</tabstop>
   <tabstop>pontox_Edit</tabstop>
+  <tabstop>pontoy_Edit</tabstop>
+  <tabstop>criarPonto_Button</tabstop>
+  <tabstop>nomereta_Edit</tabstop>
+  <tabstop>retax1_Edit</tabstop>
   <tabstop>retay1_Edit</tabstop>
   <tabstop>retax2_Edit</tabstop>
   <tabstop>retay2_Edit</tabstop>
   <tabstop>criarReta_Button</tabstop>
-  <tabstop>pushButton_2</tabstop>
-  <tabstop>adicionarPoligono_Tab</tabstop>
-  <tabstop>nomePonto_Edit</tabstop>
-  <tabstop>retax1_Edit</tabstop>
-  <tabstop>nomereta_Edit</tabstop>
-  <tabstop>pontoy_Edit</tabstop>
-  <tabstop>criarPonto_Button</tabstop>
-  <tabstop>polx3_Edit</tabstop>
-  <tabstop>poly1_Edit</tabstop>
-  <tabstop>polx1_Edit</tabstop>
-  <tabstop>poly3_Edit</tabstop>
-  <tabstop>poly2_Edit</tabstop>
-  <tabstop>polx2_Edit</tabstop>
-  <tabstop>pushButton_up</tabstop>
   <tabstop>nomepol_Edit</tabstop>
-  <tabstop>pushButton_left</tabstop>
-  <tabstop>telaParaViewPort</tabstop>
-  <tabstop>pushButton_right</tabstop>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>pushButton_down</tabstop>
+  <tabstop>polx1_Edit</tabstop>
+  <tabstop>poly1_Edit</tabstop>
+  <tabstop>polx2_Edit</tabstop>
+  <tabstop>poly2_Edit</tabstop>
+  <tabstop>polx3_Edit</tabstop>
+  <tabstop>poly3_Edit</tabstop>
+  <tabstop>pushButton_2</tabstop>
   <tabstop>pushButton</tabstop>
-  <tabstop>listaObjetos</tabstop>
   <tabstop>pushButton_zoomMinus</tabstop>
   <tabstop>pushButton_zoomPlus</tabstop>
+  <tabstop>pushButton_up</tabstop>
+  <tabstop>pushButton_down</tabstop>
+  <tabstop>pushButton_left</tabstop>
+  <tabstop>pushButton_right</tabstop>
  </tabstops>
  <resources/>
  <connections>

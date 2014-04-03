@@ -12,6 +12,7 @@ public:
     Reta();
     Reta(QString nome, Coordenada coord1, Coordenada coord2);
 
+
 };
 
 #endif // RETA_H

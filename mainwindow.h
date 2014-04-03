@@ -11,15 +11,6 @@
 #include "poligono.h"
 
 using std::string;
-class PontoTab : public QWidget
-{
-    Q_OBJECT
-
-public:
-    explicit PontoTab(char a, QWidget *parent = 0);
-
-};
-
 namespace Ui {
 class MainWindow;
 }
@@ -34,10 +25,10 @@ public:
 
 
 private slots:
-void on_pushButton_up_clicked();
-void adicionarObjeto();
 void novoPonto();
 void novaReta();
+void novoPoligono();
+void addPontoPoligono();
 
 void zoomMinus();
 void zoomPlus();
@@ -47,12 +38,8 @@ void moveDown();
 void moveLeft();
 void moveRight();
 
-
-void novoPoligono();
-void addPontoPoligono();
-
-signals:
-void accepted();
+void zerarCampos();
+void ocultarCamposPoligono(bool ocultar);
 
 private:
     Ui::MainWindow *ui;
